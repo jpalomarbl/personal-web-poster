@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  --big-title-color: #250505;
+  --small-title-color: #080934;
+  --footer-title-color: #080934;
+  --footer-text-color: #250505;
+  --outer-border-color: #024bbe;
+  --background-color: #e85b13;
+  --img-background-color: #024bbe;
+}
 
 :not(head, style) {
   display: block;
@@ -9,13 +19,13 @@
   margin-inline: auto;
   margin-top: 2.5vh;
   width: 85vh;
-  height: 92vh;
+  height: fit-content;
 
   border-inline-width: 1vw;
   border-block-width: 1vh;
-  border-color: #024bbe;
+  border-color: var(--outer-border-color);
   border-style: solid;
-  background-color: #E85B13;
+  background-color: var(--background-color);
 }
 
 .title {
@@ -36,12 +46,14 @@
 
 .title--top,
 .title--bottom {
-  font-size: 4rem;
+  font-size: 3rem;
+
+  z-index: 1;
 }
 
 .title--left,
 .title--right {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .title--uppercase {
@@ -53,7 +65,7 @@
   width: 50%;
 
   border-width: 1vw;
-  border-color: #024bbe;
+  border-color: var(--img-background-color);
   border-style: solid;
 }
 
@@ -88,24 +100,24 @@
 
   text-align: center;
   font-family: "Roboto", serif;
-  font-size: .7vw;
+  font-size: 0.7vw;
 }
 
 .footer__link {
   display: inline;
 
-  color: #080934
+  color: var(--footer-title-color);
 }
 
 .footer__link:hover {
-  color: #024bbe;
+  color: var(--outer-border-color);
 }
 
 @supports (display: grid) {
   .container {
     display: grid;
     grid-template-columns: [thelonious] 8vw [img1] 17vw [img3] 17vw [thelonious-reversed] 8vw;
-    grid-template-rows: [monk] 0.5fr [img] 4fr [monk-reverser] .5fr [date-time] .5fr;
+    grid-template-rows: [monk] 0.5fr [img] 4fr [monk-reverser] 0.5fr [date-time] 0.5fr;
 
     width: 50vw;
     height: fit-content;
@@ -123,8 +135,12 @@
 
   .title--top,
   .title--bottom {
-    font-size: clamp(13.6vw, 13.8vw, 16.1rem);
+    font-size: 10vw;
     line-height: 0.8;
+    letter-spacing: -1vw;
+  }
+
+  .title--bottom {
     letter-spacing: -1.2vw;
   }
 
@@ -142,8 +158,9 @@
   .title--right {
     display: inline-block;
     margin-block: auto;
+    margin-inline: 5vh;
 
-    font-size: clamp(8.5vw, 8.6vw, 9vw);
+    font-size: 4vw;
     line-height: 0.8;
     color: #080934;
 
@@ -192,12 +209,13 @@
 
     display: grid;
     align-items: center;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 12vh;
 
     margin: 0;
 
     border-top-style: solid;
-    border-top-color:#024bbe;
+    border-top-color: #024bbe;
     border-top-width: 1vw;
   }
 
@@ -205,7 +223,7 @@
     grid-column-start: 1;
     grid-column-end: 1;
 
-    font-size: clamp(5vw, 5.3vw, 5.3vw);
+    font-size: 4vw;
     text-transform: uppercase;
     line-height: 1;
     color: #080934;
@@ -214,6 +232,8 @@
   .date-place__date {
     grid-column-start: 2;
     grid-column-end: 2;
+
+    margin-inline: 2vw;
 
     font-size: 1.5vw;
     font-weight: bold;
@@ -224,7 +244,7 @@
   }
 
   .date-place--pointSeparator::after {
-    content: '·';
+    content: "·";
     font-size: 1vw;
   }
 }
