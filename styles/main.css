@@ -170,7 +170,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: [thelonious] 11.8% [img1] 38.24% [img3] 38.24% [thelonious-reversed] 11.8%;
-    grid-template-rows: [monk] 105px [img] 600px [monk-reverser] 105px [date-time] 105px;
+    grid-template-rows: [monk] 95px [img] 510px [monk-reverser] 105px [date-time] 95px;
 
     position: relative;
 
@@ -282,12 +282,12 @@ body {
   }
 
   .container-img__img:nth-of-type(2) {
-    transform: translate(2vw, 0);
+    transform: translate(2vw, 2vh);
     z-index: 2;
   }
 
   .container-img__img:nth-of-type(3) {
-    transform: translate(4vw, 0);
+    transform: translate(4vw, 4vh);
     z-index: 1;
   }
 
