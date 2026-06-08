@@ -73,6 +73,7 @@ body {
 .title--bottom {
   font-size: 3rem;
   color: var(--big-title-color);
+  letter-spacing: -0.7rem;
 
   z-index: 1;
 }
@@ -103,7 +104,7 @@ body {
 .date-place {
   display: inline;
 
-  margin-inline: 2vh;
+  margin-inline: 10px;
 
   font-family: "Roboto", serif;
   font-style: normal;
@@ -168,8 +169,8 @@ body {
 @supports (display: grid) {
   .container {
     display: grid;
-    grid-template-columns: [thelonious] 8vw [img1] 17vw [img3] 17vw [thelonious-reversed] 8vw;
-    grid-template-rows: [monk] 0.5fr [img] 4fr [monk-reverser] 0.5fr [date-time] 0.5fr;
+    grid-template-columns: [thelonious] 11.8% [img1] 38.24% [img3] 38.24% [thelonious-reversed] 11.8%;
+    grid-template-rows: [monk] 105px [img] 600px [monk-reverser] 105px [date-time] 105px;
 
     position: relative;
 
@@ -205,23 +206,18 @@ body {
     height: fit-content;
 
     line-height: 1;
-    letter-spacing: 0;
   }
 
   .title--top,
   .title--bottom {
     font-size: 10vw;
     line-height: 0.8;
-    letter-spacing: -1vw;
   }
-
-  .title--bottom {
-    letter-spacing: -1.2vw;
-  }
-
   .title--top {
     grid-column-start: img1;
     grid-column-end: span 3;
+
+    margin-left: 10px;
   }
 
   .title--bottom {
@@ -233,7 +229,7 @@ body {
   .title--right {
     display: inline-block;
     margin-block: auto;
-    margin-inline: 5vh;
+    margin-inline: 20px;
 
     font-size: 4vw;
     line-height: 0.8;
@@ -274,7 +270,7 @@ body {
 
     width: 96%; /* respeta tu diseño actual */
 
-    top: 0;
+    bottom: 0;
     left: 0px;
 
     transition: transform 0.3s ease; /* opcional */
@@ -301,8 +297,9 @@ body {
 
     display: grid;
     align-items: center;
+    justify-items: center;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 12vh;
+    grid-template-rows: 90px;
 
     margin: 0;
 
