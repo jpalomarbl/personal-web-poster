@@ -19,6 +19,7 @@ body {
   object-fit: cover;
 
   z-index: -1;
+  pointer-events: none;
 }
 
 .background--shadow {
@@ -26,16 +27,6 @@ body {
 
   z-index: 20;
 }
-
-/* body {
-  --big-title-color: #250505;
-  --small-title-color: #080934;
-  --footer-title-color: #080934;
-  --footer-text-color: #250505;
-  --outer-border-color: #024bbe;
-  --background-color: #e85b13;
-  --img-background-color: #024bbe;
-} */
 
 :not(head, style) {
   display: block;
@@ -59,6 +50,7 @@ body {
 
 .texture {
   display: none;
+  pointer-events: none;
 }
 
 .title {
@@ -135,10 +127,28 @@ body {
   color: var(--footer-title-color);
 }
 
+.date-place__link {
+  display: block;
+
+  width: fit-content;
+
+  text-decoration: none;
+  color: var(--footer-text-color);
+
+  transition: all 200ms ease;
+}
+
+.date-place__link:hover {
+  color: var(--outer-border-color);
+  text-decoration: underline;
+}
+
 .footer {
   margin-inline: auto;
   margin-block: 1vh;
   width: 85vh;
+
+  color: var(--background-color);
 
   text-align: center;
   font-family: "Roboto", serif;
@@ -148,7 +158,7 @@ body {
 .footer__link {
   display: inline;
 
-  color: var(--footer-title-color);
+  color: var(--background-color);
 }
 
 .footer__link:hover {
@@ -172,10 +182,10 @@ body {
   }
 
   .texture {
-    display: block; /* QUITA el display:none */
+    display: block;
 
     position: absolute;
-    inset: 0; /* equivale a top:0; left:0; right:0; bottom:0 */
+    inset: 0;
 
     width: 100%;
     height: 100%;
@@ -265,7 +275,7 @@ body {
     width: 96%; /* respeta tu diseño actual */
 
     top: 0;
-    left: 0;
+    left: 0px;
 
     transition: transform 0.3s ease; /* opcional */
   }
@@ -276,12 +286,12 @@ body {
   }
 
   .container-img__img:nth-of-type(2) {
-    transform: translate(-2vw, -2vw);
+    transform: translate(2vw, 0);
     z-index: 2;
   }
 
   .container-img__img:nth-of-type(3) {
-    transform: translate(-4vw, -4vw);
+    transform: translate(4vw, 0);
     z-index: 1;
   }
 
@@ -305,12 +315,13 @@ body {
     grid-column-start: 1;
     grid-column-end: 1;
 
-    font-size: 4vw;
+    font-size: 6vw;
     text-transform: uppercase;
     line-height: 1;
   }
 
   .date-place__date {
+    display: flex;
     grid-column-start: 2;
     grid-column-end: 2;
 
@@ -320,12 +331,9 @@ body {
     font-weight: bold;
   }
 
-  .date-place--pointSeparator {
-    display: inline;
-  }
-
-  .date-place--pointSeparator::after {
-    content: "·";
-    font-size: 1vw;
+  .date-place__separator {
+    margin-inline: 3px;
+    font-size: 1.5vw;
+    font-weight: bold;
   }
 }
