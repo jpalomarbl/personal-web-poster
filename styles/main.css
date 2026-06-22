@@ -36,7 +36,7 @@ body {
 .container {
   margin-inline: auto;
   margin-top: 2.5vh;
-  width: 85vh;
+  width: 600px;
   height: fit-content;
 
   overflow: hidden;
@@ -174,7 +174,7 @@ body {
 
     position: relative;
 
-    width: 50vw;
+    width: 600px;
     height: fit-content;
 
     border-block-width: 1vw;
@@ -210,7 +210,7 @@ body {
 
   .title--top,
   .title--bottom {
-    font-size: 10vw;
+    font-size: 7.5rem;
     line-height: 0.8;
   }
   .title--top {
@@ -231,7 +231,7 @@ body {
     margin-block: auto;
     margin-inline: 20px;
 
-    font-size: 4vw;
+    font-size: 3rem;
     line-height: 0.8;
 
     writing-mode: vertical-lr;
@@ -312,7 +312,7 @@ body {
     grid-column-start: 1;
     grid-column-end: 1;
 
-    font-size: 6vw;
+    font-size: 3.5rem;
     text-transform: uppercase;
     line-height: 1;
   }
@@ -324,7 +324,7 @@ body {
 
     margin-inline: 2vw;
 
-    font-size: 1.5vw;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
