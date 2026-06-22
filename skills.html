@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/skills.css" />
 
     <title>Jaime Simeón Palomar</title>
   </head>
@@ -19,54 +19,112 @@
 
     <div class="container">
       <img class="texture" src="./resources/texture.png" alt="Texture" />
-      <h1 class="title title--invisible">Jaime Simeón Palomar</h1>
-      <h1 class="title title--top title--uppercase">J . Simeon</h1>
-      <h1 class="title title--right title--uppercase">Full-stack · web dev</h1>
 
-      <div class="container-img">
-        <img
-          class="container-img__img"
-          src="./resources/perfil4.png"
-          alt="perfil"
-        />
-        <img
-          class="container-img__img"
-          src="./resources/perfil1.png"
-          alt="perfil"
-        />
-        <img
-          class="container-img__img"
-          src="./resources/perfil2.png"
-          alt="perfil"
-        />
-      </div>
+      <h1 class="title__header">
+        <svg class="title__container" viewBox="0 0 400 120">
+          <defs>
+            <!-- Curva principal -->
+            <path id="curve" d="M 50 90 Q 200 20 350 90" />
+            <!-- Curva ligeramente más baja para el subtítulo -->
+            <path id="curve2" d="M 50 100 Q 200 30 350 100" />
+          </defs>
 
-      <h1 class="title title--invisible">Jaime Simeón Palomar</h1>
-      <h1 class="title title--bottom title--uppercase">Palomar</h1>
-      <h1 class="title title--left title--uppercase">Full-stack · web dev</h1>
+          <text class="title" text-anchor="middle">
+            <textPath href="#curve" startOffset="50%">
+              <tspan fill="#e6e0ef" dy="-10">J. Simeón</tspan>
+            </textPath>
+            <textPath href="#curve2" startOffset="50%">
+              <tspan fill="#e6e0ef" dy="12">Palomar</tspan>
+            </textPath>
+          </text>
+        </svg>
 
-      <div class="date-place">
-        <h2 class="date-place__place">Links</h2>
-        <div class="date-place__date">
-          <a
-            href="./resources/CV_Jaime_Simeon_Palomar_Blumenthal_EN.pdf"
-            class="date-place__link"
-            >CV</a
-          >
-          <span class="date-place__separator">·</span>
-          <a href="./skills.html" class="date-place__link">Skills</a>
-          <span class="date-place__separator">·</span>
-          <a
-            href="mailto:palomarblumenthaljaimesimeon@gmail.com"
-            class="date-place__link"
-            >Email me</a
-          >
-          <span class="date-place__separator">·</span>
-          <a href="https://github.com/jpalomarbl" class="date-place__link"
-            >Github</a
-          >
+        <span class="title__secondary">Technical skills</span>
+      </h1>
+
+      <section class="skills skills--frontend">
+        <div class="skills__featured">
+          <h2 class="skills__title">Front end</h2>
+          <span class="skills__skill">Angular</span>
+          <span class="skills__skill">Angular Material</span>
+          <span class="skills__skill">Vue.js</span>
+          <span class="skills__skill">Tailwind CSS</span>
         </div>
-      </div>
+
+        <div class="skills__other">
+          <span class="skills__skill">Figma</span>
+          <span class="skills__skill">React</span>
+          <span class="skills__skill">Bootstrap</span>
+          <span class="skills__skill">HTML</span>
+          <span class="skills__skill">CSS</span>
+          <span class="skills__skill">JavaScript</span>
+          <span class="skills__skill">TypeScript</span>
+        </div>
+      </section>
+
+      <section class="skills skills--backend">
+        <div class="skills__featured">
+          <h2 class="skills__title">Back end</h2>
+          <span class="skills__skill">Node.js</span>
+          <span class="skills__skill">Express</span>
+          <span class="skills__skill">PostgreSQL</span>
+        </div>
+
+        <div class="skills__other">
+          <span class="skills__skill">Laravel</span>
+          <span class="skills__skill">Nuxt.js</span>
+          <span class="skills__skill">MongoDB</span>
+          <span class="skills__skill">MySQL</span>
+        </div>
+      </section>
+
+      <section class="skills skills--general">
+        <div class="skills__featured">
+          <h2 class="skills__title">More Skills</h2>
+          <span class="skills__skill">Java Script</span>
+          <span class="skills__skill">Git</span>
+          <span class="skills__skill">Type Script</span>
+          <span class="skills__skill">Github</span>
+        </div>
+
+        <div class="skills__other">
+          <span class="skills__skill">C</span>
+          <span class="skills__skill">C++</span>
+          <span class="skills__skill">PHP</span>
+          <span class="skills__skill">Ruby</span>
+          <span class="skills__skill">Webpack</span>
+          <span class="skills__skill">NPM</span>
+        </div>
+      </section>
+
+      <section class="poster-footer">
+        <nav class="poster-footer__menu">
+          <ul class="poster-footer__list">
+            <li class="poster-footer__list-item">
+              <a
+                href="./resources/CV_Jaime_Simeon_Palomar_Blumenthal_EN.pdf"
+                class="poster-footer__link"
+                >CV</a
+              >
+            </li>
+            <li class="poster-footer__list-item">
+              <a href="./index.html" class="poster-footer__link">Main page</a>
+            </li>
+            <li class="poster-footer__list-item">
+              <a
+                href="mailto:palomarblumenthaljaimesimeon@gmail.com"
+                class="poster-footer__link"
+                >Email me</a
+              >
+            </li>
+            <li class="poster-footer__list-item">
+              <a href="https://github.com/jpalomarbl" class="poster-footer__link"
+                >Github</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
     </div>
 
     <small class="footer">
