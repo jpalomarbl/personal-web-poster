@@ -182,6 +182,18 @@ body {
     box-shadow: -4px -4px 5px 0px rgba(0, 0, 0, 0.75);
   }
 
+  @media (max-width: 650px) {
+    .container {
+      width: 90vw;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container {
+      grid-template-rows: [monk] 95px [img] 450px [monk-reverser] 105px [date-time] 95px;
+    }
+  }
+
   .texture {
     display: block;
 
@@ -213,6 +225,7 @@ body {
     font-size: 7.5rem;
     line-height: 0.8;
   }
+
   .title--top {
     grid-column-start: img1;
     grid-column-end: span 3;
@@ -223,6 +236,29 @@ body {
   .title--bottom {
     grid-column-start: thelonious;
     grid-column-end: span 3;
+  }
+
+  @media (max-width: 650px) {
+    .title--top,
+    .title--bottom {
+      font-size: 6.5rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .title--top,
+    .title--bottom {
+      font-size: 5.5rem;
+      line-height: 1.2;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .title--top,
+    .title--bottom {
+      font-size: 4.5rem;
+      line-height: 1.2;
+    }
   }
 
   .title--left,
@@ -251,6 +287,13 @@ body {
     grid-column-end: span 1;
     grid-row-start: img;
     grid-row-end: span 2;
+  }
+
+  @media (max-width: 500px) {
+    .title--left,
+    .title--right {
+      font-size: 2.6rem;
+    }
   }
 
   .title:nth-of-type(5),
@@ -319,12 +362,14 @@ body {
 
   .date-place__date {
     display: flex;
+    align-items: center;
+
     grid-column-start: 2;
     grid-column-end: 2;
 
-    margin-inline: 2vw;
+    margin-inline: 20px;
 
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
   }
 
