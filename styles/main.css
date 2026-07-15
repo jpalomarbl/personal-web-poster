@@ -28,7 +28,7 @@ body {
   z-index: 20;
 }
 
-:not(head, style) {
+h1 {
   display: block;
   margin: 0;
 }
@@ -184,13 +184,14 @@ body {
 
   @media (max-width: 650px) {
     .container {
-      width: 90vw;
+      width: 300px;
+      margin: auto;
     }
   }
 
   @media (max-width: 500px) {
     .container {
-      grid-template-rows: [monk] 95px [img] 450px [monk-reverser] 105px [date-time] 95px;
+      grid-template-rows: [monk] 70px [img] 300px [monk-reverser] 70px [date-time] 60px;
     }
   }
 
@@ -241,7 +242,7 @@ body {
   @media (max-width: 650px) {
     .title--top,
     .title--bottom {
-      font-size: 6.5rem;
+      font-size: 6.7rem;
     }
   }
 
@@ -256,7 +257,7 @@ body {
   @media (max-width: 450px) {
     .title--top,
     .title--bottom {
-      font-size: 4.5rem;
+      font-size: 4.3rem;
       line-height: 1.2;
     }
   }
@@ -292,7 +293,7 @@ body {
   @media (max-width: 500px) {
     .title--left,
     .title--right {
-      font-size: 2.6rem;
+      font-size: 1.7rem;
     }
   }
 
@@ -342,13 +343,19 @@ body {
     align-items: center;
     justify-items: center;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 90px;
+    grid-template-rows: 100%;
 
     margin: 0;
 
     border-top-style: solid;
     border-top-color: #fbd11e;
     border-top-width: 1vw;
+  }
+
+  @media (max-width: 500px) {
+    .date-place {
+      grid-template-columns: 35% 65%;
+    }
   }
 
   .date-place__place {
@@ -358,6 +365,12 @@ body {
     font-size: 3.5rem;
     text-transform: uppercase;
     line-height: 1;
+  }
+
+  @media (max-width: 500px) {
+    .date-place__place {
+      font-size: 2.2rem;
+    }
   }
 
   .date-place__date {
@@ -371,6 +384,12 @@ body {
 
     font-size: 1.1rem;
     font-weight: bold;
+  }
+
+  @media (max-width: 500px) {
+    .date-place__date {
+      font-size: .7rem;
+    }
   }
 
   .date-place__separator {
